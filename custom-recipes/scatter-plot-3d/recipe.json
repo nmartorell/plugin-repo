@@ -15,10 +15,6 @@
     // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
     // or more dataset to each input and output role.
 
-    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
-    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
-    // associate no dataset with the role.
-
     "inputRoles": [
         {
             "name": "input_dataset",
@@ -53,12 +49,58 @@
 
     "params": [
         {
-            "name": "parameter1",
-            "label": "User-readable label",
+            "name": "plot_title",
+            "label": "Scatter Plot Title",
             "type": "STRING",
-            "description": "Some documentation for parameter1",
+            "description": "Scatter plot title, will be printed over the scatter plot.",
             "mandatory": true
         },
+        
+        {
+            "name": "x_axis",
+            "label": "X Axis",
+            "description": "X-Axis of the scatter plot",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": true
+        },
+        {
+            "name": "y_axis",
+            "label": "Y Axis",
+            "description": "Y-Axis of the scatter plot",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": true
+        },
+        {
+            "name": "z_axis",
+            "label": "Z Axis",
+            "description": "Z-Axis of the scatter plot",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": true
+        },
+        
+        {
+            "name": "filter_column",
+            "label": "Filter Column",
+            "description": "Optional column to filter by",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory" : false
+        },
+        {
+            "name": "filter_value",
+            "label": "Filter Value",
+            "description": "Value to filter by (from the filter column).",
+            "type": "SELECT",
+            "mandatory" : false,
+            "visibilityCondition" : 
+        }
+        
+        
+        
+        
         {
             "name": "parameter2",
             "type": "INT",
