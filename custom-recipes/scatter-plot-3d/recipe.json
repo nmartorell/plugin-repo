@@ -5,13 +5,12 @@
         // label: name of the recipe as displayed, should be short
         "label": "Scatter plot 3d",
         // description: longer string to help end users understand what this recipe does
-        "description": "",
+        "description": "Creates a three-dimensional scatter plot. Note that the mean z-axis value is computed for overlapping x and y values.",
         // icon: must be one of the FontAwesome 3.2.1 icons, complete list here at https://fontawesome.com/v3.2.1/icons/
-        "icon": "icon-puzzle-piece"
+        "icon": "icon-bar-chart"
     },
 
     "kind": "PYTHON",
-    
 
     // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
     // or more dataset to each input and output role.
