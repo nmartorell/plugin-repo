@@ -1,6 +1,6 @@
 def do(payload, config, plugin_config, inputs):
     
-    print(inputs)
+    print(payload)
     
     choices = [
         { "value" : "val1", "label" : "Value 1"},
