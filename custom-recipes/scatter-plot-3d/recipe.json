@@ -38,7 +38,7 @@
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": false,
-            "acceptsManagedFolder" : true
+            "acceptsManagedFolder" : true 
         }
     ],
 
