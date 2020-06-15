@@ -1,5 +1,6 @@
 def do(payload, config, plugin_config, inputs):
     
+    print("Here!")
     print(payload)
     
     choices = [
