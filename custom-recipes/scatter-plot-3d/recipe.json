@@ -96,7 +96,8 @@
             "type": "SELECT",
             "mandatory" : false,
             "visibilityCondition" : "model.filter_column != ''",
-            "getChoicesFromPython" : true
+            "getChoicesFromPython" : true,
+            "paramsPythonSetup" : "unique_columns_values.py"
         }
         
     ],
