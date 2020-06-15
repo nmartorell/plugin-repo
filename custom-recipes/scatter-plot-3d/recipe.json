@@ -47,6 +47,8 @@
        For the full list and for more details, see the documentation: https://doc.dataiku.com/dss/latest/plugins/reference/params.html
     */
 
+    "paramsPythonSetup" : "unique_columns_values.py",
+    
     "params": [
         {
             "name": "plot_title",
@@ -96,8 +98,7 @@
             "type": "SELECT",
             "mandatory" : false,
             "visibilityCondition" : "model.filter_column != ''",
-            "getChoicesFromPython" : true,
-            "paramsPythonSetup" : "unique_columns_values.py"
+            "getChoicesFromPython" : true
         }
         
     ],
