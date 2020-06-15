@@ -93,7 +93,7 @@
             "name": "filter_value",
             "label": "Filter Value",
             "description": "Value to filter by (from the filter column).",
-            "type": "STRING",
+            "type": "SELECT",
             "mandatory" : false,
             "visibilityCondition" : "model.filter_column != ''",
             "getChoicesFromPython" : true
