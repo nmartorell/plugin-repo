@@ -21,44 +21,25 @@
 
     "inputRoles": [
         {
-            "name": "input_A_role",
-            "label": "input A displayed name",
-            "description": "what input A means",
+            "name": "input_dataset",
+            "label": "Input Dataset",
+            "description": "Dataset containing data to be plotted.",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
-        },
-        {
-            "name": "input_B_role",
-            "label": "input B displayed name",
-            "description": "what input B means",
-            "arity": "NARY",
-            "required": false,
-            "acceptsDataset": true
-            // ,'mustBeSQL': true
-            // ,'mustBeStrictlyType':'HDFS'
         }
-        // ...
     ],
 
     "outputRoles": [
         {
             "name": "main_output",
-            "label": "main output displayed name",
-            "description": "what main output means",
+            "label": "Output Folder",
+            "description": "Managed Folder where the scatter plots will be saved.",
             "arity": "UNARY",
-            "required": false,
-            "acceptsDataset": true
-        },
-        {
-            "name": "errors_output",
-            "label": "errors output displayed name",
-            "description": "what errors output means",
-            "arity": "UNARY",
-            "required": false,
-            "acceptsDataset": true
+            "required": true,
+            "acceptsDataset": false,
+            "acceptsManagedFolder" : true
         }
-        // ...
     ],
 
     /* The field "params" holds a list of all the params
