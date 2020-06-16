@@ -10,4 +10,4 @@ def process(row):
     
     #dataiku.customrecipe.get_plugin_config()["words_to_remove"]
     
-    return w
+    return "here"
