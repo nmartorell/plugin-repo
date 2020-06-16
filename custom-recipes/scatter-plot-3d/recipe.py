@@ -35,7 +35,7 @@ if filter_column != "":
     df = df[df[filter_column] == filter_value]
 
 # Determine average z-axis value, for overlapping x-axis and y-axis values
-df_avg_purchase = df[[x_axis, y_axis, z_axis].groupby(by=[x_axis, y_axis], as_index=False).mean()
+df_avg_purchase = df[[x_axis, y_axis, z_axis]].groupby(by=[x_axis, y_axis], as_index=False).mean()
 
 # Construct scatter plot 
 fig = plt.figure()
