@@ -1,5 +1,3 @@
-from dataiku.customrecipe import *
-
 def process(row):
     
     # Retrieve the user-defined input column
