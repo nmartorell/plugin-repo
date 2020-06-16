@@ -25,5 +25,14 @@
         "url": "",
 
         "licenseInfo": "Apache Software License"
-    }
+    },
+    
+    "params": [
+        {
+            "type": "STRING",
+            "name": "words_to_remove",
+            "label": "List of words to remove by the custom-anonymizer processor (expects a comma-separated list)",
+            "defaultValue": ""
+        }
+    ]
 }
