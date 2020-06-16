@@ -6,7 +6,8 @@ def do(payload, config, plugin_config, inputs):
     # Retrieve filter column
     filter_column = config["filter_column"]
     
-    # Create list of unique values in filter column
+    # Retrieve input dataset
+    input_dataset = inputs[0]["fullName"]
     
     
     
