@@ -1,4 +1,3 @@
-# This file is the actual code for the custom Jython step custom-anonymizer
 from dataiku.customrecipe import *
 
 def process(row):
