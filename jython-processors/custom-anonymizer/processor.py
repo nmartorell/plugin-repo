@@ -9,7 +9,7 @@ def process(row):
     # Retrieve the user-defined input column
     text_column = params["input_column"]
 
-    # anonymize words from list
+    # Anonymize words from list
     text_list = row[text_column].split(" ")
     text_list_anon = [w if w.casefold() not in words_to_anonymize else "****" for w in text_list]
     
