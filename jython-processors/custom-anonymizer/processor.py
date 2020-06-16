@@ -13,4 +13,4 @@ def process(row):
     
     #dataiku.customrecipe.get_plugin_config()["words_to_remove"]
     
-    return words_to_anonymize
+    return input_column
