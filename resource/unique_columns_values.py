@@ -1,3 +1,5 @@
+import dataiku
+
 def do(payload, config, plugin_config, inputs):
     
     print("here!")
@@ -9,7 +11,7 @@ def do(payload, config, plugin_config, inputs):
     # Retrieve input dataset
     input_dataset = inputs[0]["fullName"]
     
-    
+    dataset = dataiku.Dataset(input_dataset)
     
     choices = [
         { "value" : "val1", "label" : "Value 1"},
