@@ -25,15 +25,5 @@
         "url": "",
 
         "licenseInfo": "Apache Software License"
-    },
-    
-    "params": [
-        {
-            "type": "STRING",
-            "name": "words_to_anonymize",
-            "label": "Words to anonymize",
-            "description" : "List of words to anonymize by the custom-anonymizer processor (expects a comma-separated list)",
-            "defaultValue": ""
-        }
-    ]
+    }
 }
