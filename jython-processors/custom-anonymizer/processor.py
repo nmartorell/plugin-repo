@@ -8,6 +8,9 @@ def process(row):
     # Retrieve the list of words to anonymize (defined as a plugin parameter)
     w = get_plugin_config()["words_to_anonymize"]
     
+    print("here!")
+    print(w)
+    
     #dataiku.customrecipe.get_plugin_config()["words_to_remove"]
     
     return "here"
