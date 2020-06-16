@@ -37,5 +37,7 @@
             "columnRole": "main",
             "mandatory": true
         }
-    ]
+    ],
+    
+    "useKernel" : true
 }
