@@ -1,4 +1,4 @@
-from dataiku.customrecipe import *
+import dataiku
 
 def process(row):
     
@@ -6,9 +6,8 @@ def process(row):
     input_column = params["input_column"]
 
     # Retrieve the list of words to anonymize (defined as a plugin parameter)
-    w = get_plugin_config()
+    w = dataiku.customrecipe.get_plugin_config()
     
-    print(w)
     #print("here!")
     #print(w)
     
