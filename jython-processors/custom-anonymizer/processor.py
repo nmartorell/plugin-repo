@@ -1,14 +1,13 @@
 def process(row):
     
+    # List of words to anonymize (assumes all lowercase)
+    words_to_anonymize = ["tags", "doll", "marker"] 
+    
     # Retrieve the user-defined input column
-    input_column = params["input_column"]
+    text_column = params["input_column"]
 
-    # Retrieve the list of words to anonymize (defined as a plugin parameter)
-    w = get_plugin_config()
+    # anonymize words from list
+    text_list = " ".split(row[text_column].lower())
+    text_list_anon = [w if w not in words_to_anonymize else "****" for w in text_list]
     
-    #print("here!")
-    #print(w)
-    
-    #dataiku.customrecipe.get_plugin_config()["words_to_remove"]
-    
-    return input_column
+    return text_list_anon.join(" ")
