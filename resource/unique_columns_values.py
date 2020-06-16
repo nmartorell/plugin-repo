@@ -14,7 +14,7 @@ def do(payload, config, plugin_config, inputs):
     dataset = dataiku.Dataset(input_dataset)
     df = dataset.get_dataframe()
     
-    unique_vals = df["filter_column"].unique().tolist()
+    unique_vals = df[filter_column].unique().tolist()
     
     print(unique_vals)
     
