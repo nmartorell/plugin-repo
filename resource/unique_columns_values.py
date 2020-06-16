@@ -12,6 +12,9 @@ def do(payload, config, plugin_config, inputs):
     input_dataset = inputs[0]["fullName"]
     
     dataset = dataiku.Dataset(input_dataset)
+    df = dataset.get_dataframe()
+    
+    unique_vals = df["filter_column"].unique().tolist()
     
     choices = [
         { "value" : "val1", "label" : "Value 1"},
