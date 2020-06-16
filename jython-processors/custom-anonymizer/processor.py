@@ -1,7 +1,7 @@
 def process(row):
     
     # List of words to anonymize (assumes all lowercase)
-    words_to_anonymize = ["tags", "doll", "marker"] 
+    words_to_anonymize = ["tags", "doll", "marker", "heart", "colour"] 
     
     # Retrieve the user-defined input column
     text_column = params["input_column"]
