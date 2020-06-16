@@ -16,8 +16,8 @@ def do(payload, config, plugin_config, inputs):
     print(unique_vals)
     
     choices = [
-        { "value" : "val1", "label" : "Value 1"},
-        { "value" : "val2", "label" : "Value 2"}
+        { "value" : "val1"},
+        { "value" : "val2"}
     ]
     
     return {"choices": choices}
