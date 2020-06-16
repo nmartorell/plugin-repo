@@ -16,6 +16,7 @@ def do(payload, config, plugin_config, inputs):
     
     unique_vals = df[filter_column].unique().tolist()
     
+    print('here2!')
     print(unique_vals)
     
     choices = [
