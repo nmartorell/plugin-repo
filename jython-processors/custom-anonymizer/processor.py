@@ -3,4 +3,4 @@
 def process(row):
     input_column = params["input_column"]
 
-    return len(row)
+    return input_column
