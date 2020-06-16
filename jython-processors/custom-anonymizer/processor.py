@@ -11,4 +11,4 @@ def process(row):
     text_list_anon = [w if w not in words_to_anonymize else "****" for w in text_list]
     
     #return " ".join(text_list_anon)
-    return row[text_column]
+    return row[text_column].lower()
