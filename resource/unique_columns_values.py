@@ -16,6 +16,8 @@ def do(payload, config, plugin_config, inputs):
     
     unique_vals = df["filter_column"].unique().tolist()
     
+    print(unique_vals)
+    
     choices = [
         { "value" : "val1", "label" : "Value 1"},
         { "value" : "val2", "label" : "Value 2"}
