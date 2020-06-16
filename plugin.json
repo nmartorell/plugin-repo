@@ -11,7 +11,7 @@
         "label": "Cc fraud advanced plugin",
 
         // description: longer string to help end users understand what this plugin does
-        "description": "",
+        "description": "Plugin developed during the CC Fraud Advanced Training (Plugin Module)",
 
         "author": "admin",
 
