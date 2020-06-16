@@ -97,7 +97,7 @@
             "description": "Value to filter by (from the filter column).",
             "type": "STRING",
             "mandatory" : false,
-            "visibilityCondition" : "model.filter_column != ''"
+            "visibilityCondition" : "!model.filter_column"
         }
         
     ],
