@@ -6,7 +6,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import os
 
-#w = get_plugin_config()
+w = get_plugin_config()
 
 ### READ PLUGIN INPUTS ###
 
