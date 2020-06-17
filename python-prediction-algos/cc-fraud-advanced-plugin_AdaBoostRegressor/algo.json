@@ -101,7 +101,7 @@
             "label": "Base Estimator",
             "description": "The base estimator class.",
             "type": "SELECT",
-            "defaultValue": ["Decision Tree Regressor"],
+            "defaultValue": ["decisiontree"],
             "selectChoices": [
                 {
                     "label":"Decision Tree Regressor",
