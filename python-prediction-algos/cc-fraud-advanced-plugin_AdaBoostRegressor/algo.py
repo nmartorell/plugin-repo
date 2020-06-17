@@ -23,7 +23,12 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             params (dict): dictionary of params set by the user in the UI.
     """
     
-    def __init__(self, prediction_type=None, params=None):        
+    def __init__(self, prediction_type=None, params=None):
+        
+        # Get user-defined parameters
+                
+        
+        # Assign the clf with the user-defined parameters
         self.clf = AdaBoostRegressor(random_state=params.get("random_state", None))
         super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
     
