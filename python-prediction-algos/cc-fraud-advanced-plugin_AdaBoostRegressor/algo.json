@@ -130,7 +130,7 @@
             "label": "Min samples split",
             "description": "The minimum number of samples required to split an internal node.",
             "type": "INT",
-            "defaultValue": [2]
+            "defaultValue": [2],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
@@ -139,7 +139,7 @@
             "label": "Min samples leaf",
             "description": "The minimum number of samples required to be at a leaf node.",
             "type": "INT",
-            "defaultValue": [1]
+            "defaultValue": [1],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },        
