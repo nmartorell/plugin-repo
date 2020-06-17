@@ -44,9 +44,6 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             
             # Apply clf
             self.clf = AdaBoostRegressor(random_state=random_state,
-                                         n_estimators=n_estimators,
-                                         learning_rate=learning_rate,
-                                         loss=loss,
                                          base_estimator=DecisionTreeRegressor(max_depth=max_depth_tree,
                                                                               min_samples_split=min_samples_split_tree,
                                                                               min_samples_leaf=min_samples_leaf_tree))
@@ -63,9 +60,6 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             
             # Apply clf
             self.clf = AdaBoostRegressor(random_state=random_state,
-                                         n_estimators=n_estimators,
-                                         learning_rate=learning_rate,
-                                         loss=loss,
                                          base_estimator=LGBMRegressor(max_depth=max_depth_gbm,
                                                                       n_estimators=n_estimators_gbm,
                                                                       min_child_samples=min_child_samples_gbm))
