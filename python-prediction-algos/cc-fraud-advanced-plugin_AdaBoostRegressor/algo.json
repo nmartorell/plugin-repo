@@ -100,7 +100,7 @@
             "name": "base_estimator",
             "label": "Base Estimator",
             "description": "The base estimator class.",
-            "type": "MULTISELECT",
+            "type": "SELECT",
             "defaultValue": ["Decision Tree Regressor"],
             "selectChoices": [
                 {

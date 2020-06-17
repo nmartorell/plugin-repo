@@ -25,10 +25,21 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
     
     def __init__(self, prediction_type=None, params=None):
         
-        # First, determine the chosen base estimator
+        # Get user-defined parameters for AdaBoost
+        n_estimators = params["n_estimators"]
+        learning_rate = params["learning_rate"]
+        loss = params["loss"]
+        random_state = params["random_state"]
+            
+        # Get base estimator
+        base_estimator = params["base_estimator"]
+            
+        # Assign clf depending on choice of base_estimator
+        if base_estimator == "trees"
         
         
-        # Get user-defined parameters
+        
+       
         
         
         # Assign the clf with the user-defined parameters
