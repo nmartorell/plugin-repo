@@ -121,7 +121,7 @@
             "label": "Max depth",
             "description": "The maximum depth of the tree.",
             "type": "INT",
-            "defaultValue": [3]
+            "defaultValue": [3],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
