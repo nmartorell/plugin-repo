@@ -85,15 +85,7 @@
                 }
             ],
             "gridParam": true
-        },
-        {
-            "name": "random_state",
-            "label": "Random state",
-            "description": "Using a fixed random seed allows for reproducible result.",
-            "type": "DOUBLE",
-            "defaultValue": 1337,
-            "gridParam": false
-        },
+        }
         
         // Params for the Base Estimator
         {
