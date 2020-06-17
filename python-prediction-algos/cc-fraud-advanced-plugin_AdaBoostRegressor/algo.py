@@ -25,8 +25,10 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
     
     def __init__(self, prediction_type=None, params=None):
         
+        # First, determine the chosen base estimator
+        
         # Get user-defined parameters
-                
+        
         
         # Assign the clf with the user-defined parameters
         self.clf = AdaBoostRegressor(random_state=params.get("random_state", None))
