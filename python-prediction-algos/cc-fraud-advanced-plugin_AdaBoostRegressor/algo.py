@@ -25,6 +25,9 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
     
     def __init__(self, prediction_type=None, params=None):
         
+        print("HERE!")
+        print(params)
+        
         # Get user-defined parameters for AdaBoost
         n_estimators = params["n_estimators"]
         learning_rate = params["learning_rate"]
@@ -41,9 +44,6 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             max_depth_tree = params["max_depth_tree"]
             min_samples_split_tree = params["min_samples_split_tree"]
             min_samples_leaf_tree = params["min_samples_leaf_tree"]
-            
-            print("HERE!")
-            print(params)
             
             # Apply clf
             self.clf = AdaBoostRegressor(random_state=random_state,
