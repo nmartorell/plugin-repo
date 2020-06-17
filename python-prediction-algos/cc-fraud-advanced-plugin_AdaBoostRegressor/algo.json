@@ -44,6 +44,8 @@
     Below is an example of parameters for an AdaBoost regressor from scikit learn.
     */
     "params": [
+        
+        // Params for AdaBoost
         {
             "name": "n_estimators",
             "label": "num estimators",
@@ -90,6 +92,9 @@
             "description": "Using a fixed random seed allows for reproducible result.",
             "type": "DOUBLE",
             "defaultValue": 1337
-        }      
+        },
+        
+        // Params for the Base Estimator
+        
     ]
 }

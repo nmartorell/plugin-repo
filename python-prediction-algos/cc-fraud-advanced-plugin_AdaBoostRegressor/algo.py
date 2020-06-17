@@ -2,6 +2,9 @@
 from dataiku.doctor.plugins.custom_prediction_algorithm import BaseCustomPredictionAlgorithm
 from sklearn.ensemble import AdaBoostRegressor
 
+from sklearn.tree import DecisionTreeRegressor
+from lightgbm import LGBMRegressor
+
 class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):    
     """
         Class defining the behaviour of `cc-fraud-advanced-plugin_AdaBoostRegressor` algorithm:
