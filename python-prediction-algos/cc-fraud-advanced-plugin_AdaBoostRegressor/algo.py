@@ -42,6 +42,9 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             min_samples_split_tree = params["min_samples_split_tree"]
             min_samples_leaf_tree = params["min_samples_leaf_tree"]
             
+            print("HERE!")
+            print(min_samples_leaf_tree)
+            
             # Apply clf
             self.clf = AdaBoostRegressor(random_state=random_state,
                                          base_estimator=DecisionTreeRegressor(max_depth=max_depth_tree,
