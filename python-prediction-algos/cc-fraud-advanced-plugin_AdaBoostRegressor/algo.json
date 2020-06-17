@@ -48,7 +48,7 @@
         // Params for AdaBoost
         {
             "name": "n_estimators",
-            "label": "num estimators",
+            "label": "Num estimators",
             "description": "The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early.",
             "type": "DOUBLES",
             "defaultValue": [50, 100],
@@ -57,7 +57,7 @@
         },
         {
             "name": "learning_rate",
-            "label": "learning rate",
+            "label": "Learning rate",
             "description":"Lower values slow down convergence and can make the model more robust. Typical values: 0.01 - 0.3",
             "type": "DOUBLES",
             "defaultValue": [0.2],
@@ -66,7 +66,7 @@
         },
         {
             "name": "loss",
-            "label": "loss",
+            "label": "Loss",
             "description": "Type of loss used.",
             "type": "MULTISELECT",
             "defaultValue": ["linear"],
