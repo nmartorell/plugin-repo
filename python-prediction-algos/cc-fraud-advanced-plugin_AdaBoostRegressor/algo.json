@@ -104,12 +104,12 @@
             "defaultValue": ["Decision Tree Regressor"],
             "selectChoices": [
                 {
-                    "value":"Decision Tree Regressor",
-                    "label":"decisiontree"
+                    "label":"Decision Tree Regressor",
+                    "value":"decisiontree"
                 },
                 {
-                    "value":"LightGBM Regressor",
-                    "label":"lightgbm"
+                    "label":"LightGBM Regressor",
+                    "value":"lightgbm"
                 }
             ],
             "gridParam": false
