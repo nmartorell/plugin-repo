@@ -120,7 +120,7 @@
             "name": "max_depth",
             "label": "Max depth",
             "description": "The maximum depth of the tree.",
-            "type": "INT",
+            "type": "DOUBLES",
             "defaultValue": [3],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
@@ -129,7 +129,7 @@
             "name": "min_samples_split",
             "label": "Min samples split",
             "description": "The minimum number of samples required to split an internal node.",
-            "type": "INT",
+            "type": "DOUBLES",
             "defaultValue": [2],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
@@ -138,7 +138,7 @@
             "name": "min_samples_leaf",
             "label": "Min samples leaf",
             "description": "The minimum number of samples required to be at a leaf node.",
-            "type": "INT",
+            "type": "DOUBLES",
             "defaultValue": [1],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
