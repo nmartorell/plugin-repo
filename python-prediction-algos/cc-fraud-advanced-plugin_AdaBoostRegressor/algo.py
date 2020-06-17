@@ -72,6 +72,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
                                                                       learning_rate=learning_rate_gbm))
             
             super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
+            print("HERE!")
              
     
     def get_clf(self):
