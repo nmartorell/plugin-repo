@@ -117,7 +117,7 @@
         
         // Params if the Base Estimator is a Decision Tree Regressor
         {
-            "name": "max_depth",
+            "name": "max_depth_tree",
             "label": "Max depth",
             "description": "The maximum depth of the tree.",
             "type": "DOUBLES",
@@ -126,7 +126,7 @@
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
         {        
-            "name": "min_samples_split",
+            "name": "min_samples_split_tree",
             "label": "Min samples split",
             "description": "The minimum number of samples required to split an internal node.",
             "type": "DOUBLES",
@@ -135,7 +135,7 @@
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
         {
-            "name": "min_samples_leaf",
+            "name": "min_samples_leaf_tree",
             "label": "Min samples leaf",
             "description": "The minimum number of samples required to be at a leaf node.",
             "type": "DOUBLES",
@@ -145,6 +145,15 @@
         },        
         
         // Params if the Base Estimator is a LightGBM Regressor
+        {
+            "name": "max_depth_gbm",
+            "label": "Max depth",
+            "description": "Maximum tree depth for base learners, <=0 means no limit.",
+            "type": "DOUBLES",
+            "defaultValue": [-1],
+            "gridParam": true,
+            "visibilityCondition":"model.base_estimator == 'lightgbm'"
+        },
         {
             "name": "random_sta2te",
             "label": "Random state",
