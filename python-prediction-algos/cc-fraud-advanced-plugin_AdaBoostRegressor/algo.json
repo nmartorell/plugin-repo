@@ -155,7 +155,7 @@
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
-            "name": "n_estimators",
+            "name": "n_estimators_gbm",
             "label": "Num estimators",
             "description": "Number of boosted trees to fit.",
             "type": "DOUBLES",
@@ -164,7 +164,7 @@
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
-            "name": "min_child_samples",
+            "name": "min_child_samples_gbm",
             "label": "Min child samples",
             "description": "Minimum number of data needed in a child (leaf).",
             "type": "DOUBLES",
@@ -173,7 +173,7 @@
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
-            "name": "learning_rate",
+            "name": "learning_rate_gbm",
             "label": "Learning rate",
             "description": "Boosting learning rate.",
             "type": "DOUBLES",
