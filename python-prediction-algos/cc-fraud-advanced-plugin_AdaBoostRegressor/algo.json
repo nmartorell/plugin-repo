@@ -116,7 +116,7 @@
         
         // Params if the Base Estimator is a Decision Tree Regressor
         {
-            "name": "random_state",
+            "name": "random_stat1e",
             "label": "Random state",
             "description": "Using a fixed random seed allows for reproducible result.",
             "type": "DOUBLE",
@@ -126,7 +126,7 @@
         
         // Params if the Base Estimator is a LightGBM Regressor
         {
-            "name": "random_state",
+            "name": "random_sta2te",
             "label": "Random state",
             "description": "Using a fixed random seed allows for reproducible result.",
             "type": "DOUBLE",
