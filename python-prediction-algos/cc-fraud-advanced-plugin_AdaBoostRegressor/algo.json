@@ -149,7 +149,7 @@
             "name": "random_sta2te",
             "label": "Random state",
             "description": "Using a fixed random seed allows for reproducible result.",
-            "type": "DOUBLE",
+            "type": "DOUBLES",
             "defaultValue": 1337,
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
