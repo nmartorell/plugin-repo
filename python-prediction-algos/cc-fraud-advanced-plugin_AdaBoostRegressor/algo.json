@@ -120,8 +120,8 @@
             "name": "max_depth_tree",
             "label": "Max depth",
             "description": "The maximum depth of the tree.",
-            "type": "DOUBLES",
-            "defaultValue": [3],
+            "type": "DOUBLE",
+            "defaultValue": 3,
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
@@ -129,18 +129,18 @@
             "name": "min_samples_split_tree",
             "label": "Min samples split",
             "description": "The minimum number of samples required to split an internal node.",
-            "type": "DOUBLES",
-            "defaultValue": [2],
-            "gridParam": true,
+            "type": "DOUBLE",
+            "defaultValue": 2,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
         {
             "name": "min_samples_leaf_tree",
             "label": "Min samples leaf",
             "description": "The minimum number of samples required to be at a leaf node.",
-            "type": "DOUBLES",
-            "defaultValue": [1],
-            "gridParam": true,
+            "type": "DOUBLE",
+            "defaultValue": 1,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },        
         
@@ -149,36 +149,36 @@
             "name": "max_depth_gbm",
             "label": "Max depth",
             "description": "Maximum tree depth for base learners, <=0 means no limit.",
-            "type": "DOUBLES",
-            "defaultValue": [-1],
-            "gridParam": true,
+            "type": "DOUBLE",
+            "defaultValue": -1,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
             "name": "n_estimators_gbm",
             "label": "Num estimators",
             "description": "Number of boosted trees to fit.",
-            "type": "DOUBLES",
-            "defaultValue": [100],
-            "gridParam": true,
+            "type": "DOUBLE",
+            "defaultValue": 100,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
             "name": "min_child_samples_gbm",
             "label": "Min child samples",
             "description": "Minimum number of data needed in a child (leaf).",
-            "type": "DOUBLES",
-            "defaultValue": [20],
-            "gridParam": true,
+            "type": "DOUBLE",
+            "defaultValue": 20,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
             "name": "learning_rate_gbm",
             "label": "Learning rate",
             "description": "Boosting learning rate.",
-            "type": "DOUBLES",
-            "defaultValue": [0.1],
-            "gridParam": true,
+            "type": "DOUBLE",
+            "defaultValue": 0.1,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         }
     ]
