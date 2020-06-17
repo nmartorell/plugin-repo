@@ -2,13 +2,13 @@
 {
     "meta" : {
         // label: name of the algorithm as displayed, should be short
-        "label": "Custom algo cc-fraud-advanced-plugin_AdaBoostRegressor",
+        "label": "AdaBoostRegressor",
 
         // description: longer string to help end users understand what this algorithm is. Will be displayed in the algorithm page
-        "description": "This is the description of the Custom algo cc-fraud-advanced-plugin_AdaBoostRegressor",
+        "description": "Plugin Algorithm that implements the Scikit-Learn AdaBoostRegressor, with DecisionTreeRegressor and LighGBM Regressor as the base estimators.",
 
         // icon: must be one of the FontAwesome 3.2.1 icons, complete list here at https://fontawesome.com/v3.2.1/icons/
-        "icon": "icon-puzzle-piece"
+        "icon": "icon-code"
     },
     
     // List of types of prediction for which the algorithm will be available.
