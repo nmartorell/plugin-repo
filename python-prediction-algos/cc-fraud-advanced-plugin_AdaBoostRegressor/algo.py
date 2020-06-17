@@ -68,7 +68,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
                                          loss=loss,
                                          base_estimator=LGBMRegressor(max_depth=max_depth_gbm,
                                                                       n_estimators=n_estimators_gbm,
-                                                                      main_child_samples=main_child_samples_gbm,
+                                                                      min_child_samples=min_child_samples_gbm,
                                                                       learning_rate=learning_rate_gbm))
             
             super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
