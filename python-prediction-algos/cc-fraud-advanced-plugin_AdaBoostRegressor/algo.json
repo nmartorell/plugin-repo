@@ -155,13 +155,13 @@
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
-            "name": "random_sta2te",
-            "label": "Random state",
-            "description": "Using a fixed random seed allows for reproducible result.",
+            "name": "min_child_samples",
+            "label": "Min child samples",
+            "description": "Minimum number of data needed in a child (leaf).",
             "type": "DOUBLES",
-            "defaultValue": 1337,
+            "defaultValue": 20,
             "gridParam": true,
-            "visibilityCondition":"model.base_estimator == 'decisiontree'"
+            "visibilityCondition":"model.base_estimator == 'lightgbm'"
         }
     ]
 }
