@@ -176,7 +176,7 @@
             "name": "learning_rate_gbm",
             "label": "Learning rate",
             "description": "Boosting learning rate.",
-            "type": "INT",
+            "type": "DOUBLE",
             "defaultValue": 0.1,
             "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
