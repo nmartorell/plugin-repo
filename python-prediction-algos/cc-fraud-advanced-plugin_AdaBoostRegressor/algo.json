@@ -91,7 +91,8 @@
             "label": "Random state",
             "description": "Using a fixed random seed allows for reproducible result.",
             "type": "DOUBLE",
-            "defaultValue": 1337
+            "defaultValue": 1337,
+            "gridParam": false
         },
         
         // Params for the Base Estimator
@@ -116,13 +117,32 @@
         
         // Params if the Base Estimator is a Decision Tree Regressor
         {
-            "name": "random_stat1e",
-            "label": "Random state",
-            "description": "Using a fixed random seed allows for reproducible result.",
-            "type": "DOUBLE",
-            "defaultValue": 1337
+            "name": "max_depth",
+            "label": "Max depth",
+            "description": "The maximum depth of the tree.",
+            "type": "INT",
+            "defaultValue": [3]
+            "gridParam": true,
+            "visibilityCondition":"model.base_estimator == 'decisiontree'"
         },
-        
+        {        
+            "name": "min_samples_split",
+            "label": "Min samples split",
+            "description": "The minimum number of samples required to split an internal node.",
+            "type": "INT",
+            "defaultValue": [2]
+            "gridParam": true,
+            "visibilityCondition":"model.base_estimator == 'decisiontree'"
+        },
+        {
+            "name": "min_samples_leaf",
+            "label": "Min samples leaf",
+            "description": "The minimum number of samples required to be at a leaf node.",
+            "type": "INT",
+            "defaultValue": [1]
+            "gridParam": true,
+            "visibilityCondition":"model.base_estimator == 'decisiontree'"
+        },        
         
         // Params if the Base Estimator is a LightGBM Regressor
         {
@@ -130,7 +150,9 @@
             "label": "Random state",
             "description": "Using a fixed random seed allows for reproducible result.",
             "type": "DOUBLE",
-            "defaultValue": 1337
+            "defaultValue": 1337,
+            "gridParam": true,
+            "visibilityCondition":"model.base_estimator == 'decisiontree'"
         }
     ]
 }
