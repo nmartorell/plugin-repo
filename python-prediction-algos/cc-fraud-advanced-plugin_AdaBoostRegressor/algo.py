@@ -43,7 +43,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             min_samples_leaf_tree = params["min_samples_leaf_tree"]
             
             print("HERE!")
-            print(min_samples_leaf_tree)
+            print(params)
             
             # Apply clf
             self.clf = AdaBoostRegressor(random_state=random_state,
