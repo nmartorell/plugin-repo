@@ -58,9 +58,9 @@
         {
             "name": "learning_rate",
             "label": "Learning rate",
-            "description":"Lower values slow down convergence and can make the model more robust. Typical values: 0.01 - 0.3",
+            "description":"Lower values slow down convergence and can make the model more robust.",
             "type": "DOUBLES",
-            "defaultValue": [0.2],
+            "defaultValue": [1.0],
             "allowDuplicates": false,
             "gridParam": true
         },
