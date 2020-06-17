@@ -95,6 +95,42 @@
         },
         
         // Params for the Base Estimator
+        {
+            "name": "base_estimator",
+            "label": "Base Estimator",
+            "description": "The base estimator class.",
+            "type": "MULTISELECT",
+            "defaultValue": ["Decision Tree Regressor"],
+            "selectChoices": [
+                {
+                    "value":"Decision Tree Regressor",
+                    "label":"decisiontree"
+                },
+                {
+                    "value":"LightGBM Regressor",
+                    "label":"lightgbm"
+                }
+            ],
+            "gridParam": false
+        },
         
+        // Params if the Base Estimator is a Decision Tree Regressor
+        {
+            "name": "random_state",
+            "label": "Random state",
+            "description": "Using a fixed random seed allows for reproducible result.",
+            "type": "DOUBLE",
+            "defaultValue": 1337
+        },
+        
+        
+        // Params if the Base Estimator is a LightGBM Regressor
+        {
+            "name": "random_state",
+            "label": "Random state",
+            "description": "Using a fixed random seed allows for reproducible result.",
+            "type": "DOUBLE",
+            "defaultValue": 1337
+        },
     ]
 }
