@@ -85,7 +85,7 @@
                 }
             ],
             "gridParam": true
-        }
+        },
         
         // Params for the Base Estimator
         {
