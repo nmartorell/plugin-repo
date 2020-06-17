@@ -35,16 +35,44 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
         base_estimator = params["base_estimator"]
             
         # Assign clf depending on choice of base_estimator
-        if base_estimator == "trees"
-        
-        
-        
-       
-        
-        
-        # Assign the clf with the user-defined parameters
-        self.clf = AdaBoostRegressor(random_state=params.get("random_state", None))
-        super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
+        if base_estimator == "decisiontree":
+            
+            # Get decision tree parameters
+            max_depth_tree = params["max_depth_tree"]
+            min_samples_split_tree = params["min_samples_split_tree"]
+            min_samples_leaf_tree = params["min_samples_leaf_tree"]
+            
+            # Apply clf
+            self.clf = AdaBoostRegressor(random_state=random_state,
+                                         n_estimators=n_estimators,
+                                         learning_rate=learning_rate,
+                                         loss=loss,
+                                         base_estimator=DecisionTreeRegressor(max_depth=max_depth_tree,
+                                                                              min_samples_split=min_samples_split_tree,
+                                                                              min_samples_leaf=min_samples_leaf_tree))
+            
+            super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
+            
+        elif base_estimator == "lightgbm":
+            
+            # Get lightgbm parameters
+            max_depth_gbm = params["max_depth_gbm"]
+            n_estimators_gbm = params["n_estimators_gbm"]
+            min_child_samples_gbm = params["min_child_samples_gbm"]
+            learning_rate_gbm = params["learning_rate_gbm"]
+            
+            # Apply clf
+            self.clf = AdaBoostRegressor(random_state=random_state,
+                                         n_estimators=n_estimators,
+                                         learning_rate=learning_rate,
+                                         loss=loss,
+                                         base_estimator=LGBMRegressor(max_depth=max_depth_gbm,
+                                                                      n_estimators=n_estimators_gbm,
+                                                                      main_child_samples=main_child_samples_gbm,
+                                                                      learning_rate=learning_rate_gbm))
+            
+            super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
+             
     
     def get_clf(self):
         """
