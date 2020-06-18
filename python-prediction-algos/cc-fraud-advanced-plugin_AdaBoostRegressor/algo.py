@@ -53,30 +53,12 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             
             
         else:
-            raise Exception("No base estimator of type {}".format(base_estimator_type))
+            raise Exception("No base estimator of type {}".format(base_estimator_type)) 
             
+        # Assign clf to self
+        self.clf = AdaBoostRegressor(base_estimator=base_estimator) # note that all other params are set by DSS during grid search
+        super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
             
-            
-            # Apply clf
-            self.clf = AdaBoostRegressor(base_estimator=DecisionTreeRegressor(max_depth=max_depth_tree,
-                                                                              min_samples_split=min_samples_split_tree,
-                                                                              min_samples_leaf=min_samples_leaf_tree))
-            
-            del params["n_estimators_gbm"]
-            super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
-            
-        elif base_estimator == "lightgbm":
-            
-            
-            
-            # Apply clf
-            self.clf = AdaBoostRegressor(base_estimator=LGBMRegressor(max_depth=max_depth_gbm,
-                                                                      n_estimators=n_estimators_gbm,
-                                                                      min_child_samples=min_child_samples_gbm))
-            
-            del params["n_estimators_gbm"]
-            super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
-             
     
     def get_clf(self):
         """
