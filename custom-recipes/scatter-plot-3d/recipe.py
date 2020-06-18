@@ -82,7 +82,7 @@ folder_for_plots = dataiku.Folder(output_folder_name)
 #plt.savefig(path_fig)
 
 f = io.BytesIO()
-plt.savefig(f)
+plt.savefig(f, format="png")
 folder_for_plots.upload_stream("test.png", f)
 
 #with folder_for_plots.get_writer(plot_title) as w:
