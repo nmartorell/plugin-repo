@@ -42,7 +42,7 @@ if (x_axis not in df.columns) or (y_axis not in df.columns) or (z_axis not in df
 if (not is_numeric_dtype(df[x_axis])) or (not is_numeric_dtype(df[y_axis])) or (not is_numeric_dtype(df[z_axis])):
     raise ValueError("X-axis, Y-axis, and Z-axis columns should only contain numeric values.")
 
-# Check that the filter column exists (if defined)
+# Check that the filter column is part of the dataframe (if defined)
 if (filter_column is not None) and (filter_column not in df.columns):
     raise KeyError("If defined, the filter column parameter must be a column in the input dataset.")
     
@@ -57,7 +57,7 @@ if (filter_column is not None) and (filter_value is None):
     
 ### GENERATE 3D SCATTER PLOT ###
 
-# Filter values in dataset (optional, based in user input)
+# Filter values in dataset (if filter_column is defined)
 if filter_column is not None:
     df = df[df[filter_column].astype(str) == str(filter_value)] # force a string comparison
 
