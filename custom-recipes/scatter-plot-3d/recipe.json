@@ -91,8 +91,7 @@
             "description": "Optional column to filter by",
             "type": "COLUMN",
             "columnRole": "input_dataset",
-            "mandatory" : false,
-            "defaultValue" : ''
+            "mandatory" : false
         },
         {
             "name": "filter_value",
@@ -100,7 +99,6 @@
             "description": "Value of the filter column to filter by.",
             "type": "STRING",
             "mandatory" : false,
-            "defaultValue" : '',
             "visibilityCondition" : "model.filter_column != ''"
         }
         
