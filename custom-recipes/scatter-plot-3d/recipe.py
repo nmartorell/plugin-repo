@@ -48,6 +48,7 @@ if (filter_column is not None) and (filter_column not in df.columns):
     
 print("Here!")
 print(str(filter_value))
+print(type(filter_value))
 print("THERE!")
 # Check that if a filter column has been defined, so has a filter value
 if (filter_column is not None) and (filter_value is None):
