@@ -52,7 +52,6 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
                                            min_child_samples=min_child_samples_gbm,
                                            learning_rate=learning_rate_gbm)
             
-            
         else:
             raise Exception("No base estimator of type {}".format(base_estimator_type)) 
             
