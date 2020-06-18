@@ -43,18 +43,14 @@ if (not is_numeric_dtype(df[x_axis])) or (not is_numeric_dtype(df[y_axis])) or (
     raise ValueError("X-axis, Y-axis, and Z-axis columns should only contain numeric values.")
 
 # Check that the filter column is part of the dataframe (if defined)
-if (filter_column is not None) and (filter_column not in df.columns):
+if (filter_column != '') and (filter_column not in df.columns):
     raise KeyError("If defined, the filter column parameter must be a column in the input dataset.")
-    
-# Check that if a filter column has been defined, so has a filter value
-if (filter_column is not None) and (filter_value is None):
-    raise ValueError("A filter value should be defined, if a filter column has been defined.")
     
     
 ### GENERATE 3D SCATTER PLOT ###
 
 # Filter values in dataset (if filter_column is defined)
-if filter_column is not None:
+if filter_column != '':
     df = df[df[filter_column].astype(str) == str(filter_value)] # force a string comparison
 
 # Determine average z-axis value, for overlapping x-axis and y-axis values
