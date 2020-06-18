@@ -21,7 +21,7 @@ try:
     z_axis = get_recipe_config()['z_axis']
 
 except Exception:
-    raise Exception("Please enter a plot title and an x, y and x axis.")
+    raise Exception("Please enter a plot title, and columns indentifying an x, y and z axis.")
     
 # Retrieve optional user-defined parameters
 filter_column = get_recipe_config().get('filter_column', None)
