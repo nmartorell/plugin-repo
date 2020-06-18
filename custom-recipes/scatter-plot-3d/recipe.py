@@ -54,7 +54,7 @@ if (filter_column is not None) and (filter_value is None):
 ### GENERATE 3D SCATTER PLOT ###
 
 # Filter values in dataset (optional, based in user input)
-if (filter_column != "") and (filter_column != None):
+if filter_column is not None:
     df = df[df[filter_column] == filter_value]
 
 # Determine average z-axis value, for overlapping x-axis and y-axis values
