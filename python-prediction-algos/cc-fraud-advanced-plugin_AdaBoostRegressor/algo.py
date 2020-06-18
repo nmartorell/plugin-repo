@@ -46,6 +46,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
                                                                               min_samples_split=min_samples_split_tree,
                                                                               min_samples_leaf=min_samples_leaf_tree))
             
+            del params["n_estimators_gbm"]
             super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
             
         elif base_estimator == "lightgbm":
@@ -61,6 +62,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
                                                                       n_estimators=n_estimators_gbm,
                                                                       min_child_samples=min_child_samples_gbm))
             
+            del params["n_estimators_gbm"]
             super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
              
     
