@@ -46,6 +46,8 @@ if (not is_numeric_dtype(df[x_axis])) or (not is_numeric_dtype(df[y_axis])) or (
 if (filter_column is not None) and (filter_column not in df.columns):
     raise KeyError("If defined, the filter column parameter must be a column in the input dataset.")
     
+print("Here!")
+print(filter_value)
 # Check that if a filter column has been defined, so has a filter value
 if (filter_column is not None) and (filter_value is None):
     raise ValueError("A filter value should be defined, if a filter column has been defined.")
