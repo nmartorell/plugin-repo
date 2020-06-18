@@ -6,6 +6,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import os
 
+
 ### READ PLUGIN INPUTS ###
 
 # Retrieve input and output dataset names
@@ -13,16 +14,12 @@ input_dataset_name = get_input_names_for_role('input_dataset')[0]
 output_folder_name = get_output_names_for_role('main_output')[0]
 
 # Retrieve mandatory user-defined parameters
-try:
-    plot_title = get_recipe_config()['plot_title']
+plot_title = get_recipe_config().get('plot_title', "Scatter Plot Title")
     
-    x_axis = get_recipe_config()['x_axis']
-    y_axis = get_recipe_config()['y_axis']
-    z_axis = get_recipe_config()['z_axis']
+x_axis = get_recipe_config().get('x_axis', None)
+y_axis = get_recipe_config().get('y_axis', None)
+z_axis = get_recipe_config().get('z_axis', None)
 
-except Exception:
-    raise Exception("Please enter a plot title, and columns indentifying an x, y and z axis.")
-    
 # Retrieve optional user-defined parameters
 filter_column = get_recipe_config().get('filter_column', None)
 filter_value = get_recipe_config().get('filter_value', None)
@@ -31,6 +28,12 @@ filter_value = get_recipe_config().get('filter_value', None)
 input_dataset = dataiku.Dataset(input_dataset_name)
 df = input_dataset.get_dataframe()
 
+
+### ERROR CHECKING OF USER INPUTS ###
+
+# Check that x, y and z axis correspond to column names
+if (x_axis not in df.columns) or (y_axis not in df.columns) or (z_axis not in df.columns):
+    raise KeyError("X-, Y-, and Z-axis parameters must be columns in the input dataset")
 
 ### GENERATE 3D SCATTER PLOT ###
 
