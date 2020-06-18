@@ -47,9 +47,9 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             min_child_samples_gbm = params["min_child_samples_gbm"]
             learning_rate_gbm = params["learning_rate_gbm"]
             
-            DecisionTreeRegressor(max_depth=max_depth_tree,
-                                  min_samples_split=min_samples_split_tree,
-                                  min_samples_leaf=min_samples_leaf_tree)
+            base_estimator = DecisionTreeRegressor(max_depth=max_depth_tree,
+                                                   min_samples_split=min_samples_split_tree,
+                                                   min_samples_leaf=min_samples_leaf_tree)
             
             
         else:
