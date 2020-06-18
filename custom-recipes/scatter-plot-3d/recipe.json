@@ -63,7 +63,7 @@
         {
             "name": "x_axis",
             "label": "X Axis",
-            "description": "Column from input dataset for X-Axis of the scatter plot (must be numeric)",
+            "description": "Column from input dataset for X-Axis of the scatter plot (must be numeric).",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true
@@ -71,7 +71,7 @@
         {
             "name": "y_axis",
             "label": "Y Axis",
-            "description": "Column from input dataset for Y-Axis of the scatter plot (must be numeric)",
+            "description": "Column from input dataset for Y-Axis of the scatter plot (must be numeric).",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true
@@ -79,7 +79,7 @@
         {
             "name": "z_axis",
             "label": "Z Axis",
-            "description": "Column from input dataset for Z-Axis of the scatter plot (must be numeric)",
+            "description": "Column from input dataset for Z-Axis of the scatter plot (must be numeric).",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true
