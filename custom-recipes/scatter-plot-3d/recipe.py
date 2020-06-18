@@ -8,6 +8,7 @@ from pandas.api.types import is_numeric_dtype
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import os
+import io
 
 
 ### READ PLUGIN INPUTS ###
@@ -80,8 +81,11 @@ folder_for_plots = dataiku.Folder(output_folder_name)
 #path_fig = os.path.join(folder_path, plot_title)
 #plt.savefig(path_fig)
 
-with folder_for_plots.get_writer(plot_title) as w:
-    plt.savefig(w)
+f = io.BytesIO()
+plt.savefig(f)
+
+#with folder_for_plots.get_writer(plot_title) as w:
+#   plt.savefig(w)
 
 
 
