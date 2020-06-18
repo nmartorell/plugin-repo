@@ -96,7 +96,7 @@
         {
             "name": "filter_value",
             "label": "Filter Value",
-            "description": "Value of the filter column to filter by.",
+            "description": "Value of the filter column to filter by. Note: coerced string comparison, so floats can be problematic.",
             "type": "STRING",
             "mandatory" : false,
             "visibilityCondition" : "model.filter_column != ''"
