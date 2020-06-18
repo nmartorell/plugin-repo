@@ -59,7 +59,7 @@ if (filter_column is not None) and (filter_value is None):
 
 # Filter values in dataset (optional, based in user input)
 if filter_column is not None:
-    df = df[df[filter_column] == filter_value]
+    df = df[df[filter_column].astype(str) == str(filter_value)] # force a string comparison
 
 # Determine average z-axis value, for overlapping x-axis and y-axis values
 df_avg_purchase = df[[x_axis, y_axis, z_axis]].groupby(by=[x_axis, y_axis], as_index=False).mean()
