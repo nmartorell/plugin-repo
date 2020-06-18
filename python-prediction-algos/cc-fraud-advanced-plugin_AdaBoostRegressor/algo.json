@@ -141,9 +141,9 @@
             "name": "max_depth_gbm",
             "label": "Max depth",
             "description": "Maximum tree depth for base learners, <=0 means no limit.",
-            "type": "DOUBLES",
-            "defaultValue": [-1],
-            "gridParam": true,
+            "type": "INT",
+            "defaultValue": -1,
+            "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
         {
