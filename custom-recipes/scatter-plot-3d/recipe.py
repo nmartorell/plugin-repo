@@ -2,6 +2,9 @@ import dataiku
 from dataiku.customrecipe import *
 import pandas as pd, numpy as np
 
+from pandas.api.types import is_string_dtype
+from pandas.api.types import is_numeric_dtype
+
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import os
@@ -35,7 +38,8 @@ df = input_dataset.get_dataframe()
 if (x_axis not in df.columns) or (y_axis not in df.columns) or (z_axis not in df.columns):
     raise KeyError("X-axis, Y-axis, and Z-axis parameters must be columns in the input dataset")
     
-# Check that x, y, and z axis columns are numeric.  
+# Check that x, y, and z axis columns are numeric
+for 
 
 
 ### GENERATE 3D SCATTER PLOT ###
