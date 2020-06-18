@@ -19,14 +19,14 @@ output_folder_name = get_output_names_for_role('main_output')[0]
 # Retrieve mandatory user-defined parameters
 plot_title = get_recipe_config().get('plot_title', "Scatter Plot Title")
     
-x_axis = get_recipe_config().get('x_axis', None)
-y_axis = get_recipe_config().get('y_axis', None)
-z_axis = get_recipe_config().get('z_axis', None)
+x_axis = get_recipe_config().get('x_axis', '')
+y_axis = get_recipe_config().get('y_axis', '')
+z_axis = get_recipe_config().get('z_axis', '')
 
 # Retrieve optional user-defined parameters
-filter_column = get_recipe_config().get('filter_column', None)
-filter_value = get_recipe_config().get('filter_value', None)
-    
+filter_column = get_recipe_config().get('filter_column', '')
+filter_value = get_recipe_config().get('filter_value', '')
+
 # Read input dataset as dataframe
 input_dataset = dataiku.Dataset(input_dataset_name)
 df = input_dataset.get_dataframe()
