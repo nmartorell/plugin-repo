@@ -33,7 +33,7 @@ df = input_dataset.get_dataframe()
 
 # Check that x, y and z axis correspond to column names
 if (x_axis not in df.columns) or (y_axis not in df.columns) or (z_axis not in df.columns):
-    raise KeyError("X-, Y-, and Z-axis parameters must be columns in the input dataset")
+    raise KeyError("X-axis, Y-axis, and Z-axis parameters must be columns in the input dataset")
 
 ### GENERATE 3D SCATTER PLOT ###
 
