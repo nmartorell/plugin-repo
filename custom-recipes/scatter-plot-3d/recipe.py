@@ -42,6 +42,7 @@ if (x_axis not in df.columns) or (y_axis not in df.columns) or (z_axis not in df
 if (not is_numeric_dtype(df[x_axis])) or (not is_numeric_dtype(df[y_axis])) or (not is_numeric_dtype(df[z_axis])):
     raise ValueError("X-axis, Y-axis, and Z-axis columns should only contain numeric values.")
 
+# 
 
 ### GENERATE 3D SCATTER PLOT ###
 

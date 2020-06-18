@@ -87,7 +87,7 @@
         
         {
             "name": "filter_column",
-            "label": "Filter Column (optional; must be of type integer or string)",
+            "label": "Filter Column (Optional)",
             "description": "Optional column to filter by",
             "type": "COLUMN",
             "columnRole": "input_dataset",
