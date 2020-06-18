@@ -57,6 +57,8 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             
         # Assign clf to self
         self.clf = AdaBoostRegressor(base_estimator=base_estimator) # note that all other params are set by DSS during grid search
+        
+        # Call the init method of the parent class (required by DSS)
         super(CustomPredictionAlgorithm, self).__init__(prediction_type, params)
             
     
