@@ -47,7 +47,7 @@ if (filter_column is not None) and (filter_column not in df.columns):
     raise KeyError("If defined, the filter column parameter must be a column in the input dataset.")
     
 print("Here!")
-print(filter_value)
+print(str(filter_value))
 print("THERE!")
 # Check that if a filter column has been defined, so has a filter value
 if (filter_column is not None) and (filter_value is None):
