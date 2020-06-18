@@ -26,7 +26,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
     def __init__(self, prediction_type=None, params=None):
             
         # Create base estimator
-        base_estimator_type = "hello"#params["base_estimator"]
+        base_estimator_type = params["base_estimator"]
         
         if base_estimator_type == "decisiontree":
             
