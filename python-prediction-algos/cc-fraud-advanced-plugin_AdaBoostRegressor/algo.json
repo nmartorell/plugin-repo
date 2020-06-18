@@ -151,7 +151,7 @@
             "label": "Num estimators",
             "description": "Number of boosted trees to fit.",
             "type": "INT",
-            "defaultValue": 100,
+            "defaultValue": [100],
             "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
