@@ -24,22 +24,38 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
     """
     
     def __init__(self, prediction_type=None, params=None):
+            
+        # Create base estimator
+        base_estimator_type = "hello"#params["base_estimator"]
         
-        # Get user-defined parameters for AdaBoost
-        n_estimators = params["n_estimators"]
-        learning_rate = params["learning_rate"]
-        loss = params["loss"]
-            
-        # Get base estimator
-        base_estimator = params["base_estimator"]
-            
-        # Assign clf depending on choice of base_estimator
-        if base_estimator == "decisiontree":
+        if base_estimator_type == "decisiontree":
             
             # Get decision tree parameters
             max_depth_tree = params["max_depth_tree"]
             min_samples_split_tree = params["min_samples_split_tree"]
             min_samples_leaf_tree = params["min_samples_leaf_tree"]
+            
+            base_estimator = DecisionTreeRegressor(max_depth=max_depth_tree,
+                                                   min_samples_split=min_samples_split_tree,
+                                                   min_samples_leaf=min_samples_leaf_tree)
+            
+        elif base_estimator_type == "lightgbm":
+            
+            # Get lightgbm parameters
+            max_depth_gbm = params["max_depth_gbm"]
+            n_estimators_gbm = params["n_estimators_gbm"]
+            min_child_samples_gbm = params["min_child_samples_gbm"]
+            learning_rate_gbm = params["learning_rate_gbm"]
+            
+            DecisionTreeRegressor(max_depth=max_depth_tree,
+                                  min_samples_split=min_samples_split_tree,
+                                  min_samples_leaf=min_samples_leaf_tree)
+            
+            
+        else:
+            raise Exception("No base estimator of type {}".format(base_estimator_type))
+            
+            
             
             # Apply clf
             self.clf = AdaBoostRegressor(base_estimator=DecisionTreeRegressor(max_depth=max_depth_tree,
@@ -51,11 +67,7 @@ class CustomPredictionAlgorithm(BaseCustomPredictionAlgorithm):
             
         elif base_estimator == "lightgbm":
             
-            # Get lightgbm parameters
-            max_depth_gbm = params["max_depth_gbm"]
-            n_estimators_gbm = params["n_estimators_gbm"]
-            min_child_samples_gbm = params["min_child_samples_gbm"]
-            learning_rate_gbm = params["learning_rate_gbm"]
+            
             
             # Apply clf
             self.clf = AdaBoostRegressor(base_estimator=LGBMRegressor(max_depth=max_depth_gbm,
