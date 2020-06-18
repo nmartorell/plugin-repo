@@ -142,7 +142,7 @@
             "label": "Max depth",
             "description": "Maximum tree depth for base learners, <=0 means no limit.",
             "type": "DOUBLES",
-            "defaultValue": -1,
+            "defaultValue": [-1],
             "gridParam": true,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
@@ -151,7 +151,7 @@
             "label": "Num estimators",
             "description": "Number of boosted trees to fit.",
             "type": "INT",
-            "defaultValue": [100],
+            "defaultValue": 100,
             "gridParam": false,
             "visibilityCondition":"model.base_estimator == 'lightgbm'"
         },
