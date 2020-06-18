@@ -12,7 +12,7 @@ import os
 input_dataset_name = get_input_names_for_role('input_dataset')[0]
 output_folder_name = get_output_names_for_role('main_output')[0]
 
-# Retrieve user-defined parameters
+# Retrieve mandatory user-defined parameters
 plot_title = get_recipe_config()['plot_title']
 
 x_axis = get_recipe_config()['x_axis']
@@ -20,7 +20,8 @@ y_axis = get_recipe_config()['y_axis']
 z_axis = get_recipe_config()['z_axis']
 
 filter_column = get_recipe_config()['filter_column']
-filter_value = get_recipe_config()['filter_value']
+    
+filter_value = get_recipe_config().get('filter_value', None)
 
 # Read input dataset as dataframe
 input_dataset = dataiku.Dataset(input_dataset_name)
@@ -30,7 +31,7 @@ df = input_dataset.get_dataframe()
 ### GENERATE 3D SCATTER PLOT ###
 
 # Filter values in dataset (optional, based in user input)
-if filter_column != "":
+if (filter_column != "") and (filter_column != None):
     df = df[df[filter_column] == filter_value]
 
 # Determine average z-axis value, for overlapping x-axis and y-axis values
