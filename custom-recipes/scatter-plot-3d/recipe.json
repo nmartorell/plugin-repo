@@ -87,7 +87,7 @@
         
         {
             "name": "filter_column",
-            "label": "Filter Column (Optional)",
+            "label": "Filter Column (optional; must be of type integer or string)",
             "description": "Optional column to filter by",
             "type": "COLUMN",
             "columnRole": "input_dataset",
@@ -97,7 +97,7 @@
         {
             "name": "filter_value",
             "label": "Filter Value",
-            "description": "Value to filter by (from the filter column).",
+            "description": "Value of the filter column to filter by.",
             "type": "STRING",
             "mandatory" : false,
             "defaultValue" : '',
